@@ -14,7 +14,7 @@ public:
             buckets[frequency]+=repeated_char;
         }
         string result=" ";
-        for(int i=n;i>=0;i--){
+        for(int i=n;i>=1;i--){
             if(!buckets[i].empty()){
                 result+=buckets[i];
             }
