@@ -8,12 +8,12 @@ public:
         for(char c:s){
             counts[c]++;
         }
-        vector<string>buckets[n+1,""];
-        for(auto const& [characters,frequency]:counts){
-            char repeated_char(frequency,characters);
+        vector<string>buckets(n+1, "");
+        for(auto const& [character,frequency]:counts){
+            string repeated_char(frequency,character);
             buckets[frequency]+=repeated_char;
         }
-        string result=" ";
+        string result="";
         for(int i=n;i>=1;i--){
             if(!buckets[i].empty()){
                 result+=buckets[i];
@@ -21,4 +21,4 @@ public:
         }
         return result;
     }
-}
+};
